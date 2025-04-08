@@ -67,6 +67,8 @@ vim.o.clipboard = 'unnamedplus'
 -- enable faster scrolling
 vim.o.ttyfast = true
 
+-- hightlight current line
+
 -- color
 vim.api.nvim_set_hl(0, 'Normal',        { fg = '#ffffff', bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'NormalNC',      { fg = '#ffffff', bg = 'NONE' })
