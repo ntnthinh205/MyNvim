@@ -68,6 +68,7 @@ vim.o.clipboard = 'unnamedplus'
 vim.o.ttyfast = true
 
 -- hightlight current line
+vim.opt.termguicolors = true
 
 -- color
 vim.api.nvim_set_hl(0, 'Normal',        { fg = '#ffffff', bg = 'NONE' })
