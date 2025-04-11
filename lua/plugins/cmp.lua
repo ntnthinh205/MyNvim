@@ -24,6 +24,7 @@ return {
           ['<Tab>'] = cmp.mapping.select_next_item(),
           ['<S-Tab>'] = cmp.mapping.select_prev_item(),
           ['<CR>'] = cmp.mapping.confirm({ select = true }),
+          ['<C-Space>'] = cmp.mapping.complete(),
         }),
         sources = cmp.config.sources({
           { name = 'nvim_lsp' },
@@ -52,7 +53,7 @@ return {
       require("lsp_signature").setup({
         bind = true,
         handler_opts = { border = "rounded" },
-        hint_enable = true,
+        hint_enable = false,
         floating_window = true,
         fix_pos = false,
         hint_prefix = "💡 ",

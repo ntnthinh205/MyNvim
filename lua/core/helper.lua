@@ -28,6 +28,23 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
+vim.api.nvim_create_user_command("CopyDiagnostic", function()
+  local line = vim.api.nvim_win_get_cursor(0)[1] - 1
+  local diagnostics = vim.diagnostic.get(0, { lnum = line })
+
+  if #diagnostics == 0 then
+    return
+  end
+
+  local text = ""
+  for _, d in ipairs(diagnostics) do
+    text = text .. string.format("[%s] %s\n", vim.diagnostic.severity[d.severity], d.message)
+  end
+
+  vim.fn.setreg('+', text) -- Copy vào clipboard
+  print("Coppied")
+end, {})
+
 vim.cmd [[
   highlight DiagnosticVirtualTextError guifg=#f38ba8 gui=bold
   highlight DiagnosticVirtualTextWarn  guifg=#f9e2af gui=bold

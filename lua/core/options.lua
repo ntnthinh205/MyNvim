@@ -48,6 +48,7 @@ vim.o.autoindent = true
 
 -- add line numbers
 vim.o.number = true
+vim.o.relativenumber = true
 
 -- get bash-like tab completions
 vim.o.wildmode = 'longest,list'
@@ -82,6 +83,7 @@ vim.api.nvim_set_hl(0, 'FloatBorder',   { fg = '#ffffff', bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'PmenuBorder',   { fg = '#ffffff', bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'CmpBorder',     { fg = '#ffffff', bg = 'NONE' })
 vim.api.nvim_set_hl(0, 'WinSeparator',  { fg = '#ffffff', bg = 'NONE' })
+
 vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = function()
@@ -100,3 +102,6 @@ vim.api.nvim_create_autocmd("ColorScheme", {
     ]]
   end
 })
+vim.opt.cursorline = true;
+vim.api.nvim_set_hl(0, 'CursorLine',  { fg = 'NONE', bg = 'NONE', bold = true })
+
