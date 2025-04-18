@@ -3,7 +3,8 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = "OceanicNext",
+				theme = "auto",
+                globalstatus = true, 
 			},
 		})
 	end,

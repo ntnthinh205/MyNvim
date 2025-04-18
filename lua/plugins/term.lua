@@ -6,13 +6,13 @@ return {
             size = 20,
             open_mapping = [[<C-\>]],
             hide_numbers = true,
-            shade_terminals = true,
+            shade_terminals = false,
             start_in_insert = true,
             insert_mappings = true,
             persist_size = true,
             direction = "horizontal",
             float_opts = {
-                border = "curved",
+                -- border = "curved",
                 winblend = 3,
             },
         })
@@ -42,5 +42,10 @@ return {
         function _HORI_TERM()
             hori_term:toggle()
         end
+
+        -- keymaps
+        vim.keymap.set("n", "<leader>tf", _FLOAT_TERM, { desc = "Toggle Floating Terminal" })
+        vim.keymap.set("n", "<leader>tv", _VERT_TERM, { desc = "Toggle Vertical Terminal" })
+        vim.keymap.set("n", "<leader>th", _HORI_TERM, { desc = "Toggle Horizontal Terminal" })
     end,
 }

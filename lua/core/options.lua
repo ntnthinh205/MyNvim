@@ -49,6 +49,7 @@ vim.o.autoindent = true
 -- add line numbers
 vim.o.number = true
 vim.o.relativenumber = true
+vim.opt.signcolumn = "yes:1"
 
 -- get bash-like tab completions
 vim.o.wildmode = 'longest,list'
@@ -68,40 +69,36 @@ vim.o.clipboard = 'unnamedplus'
 -- enable faster scrolling
 vim.o.ttyfast = true
 
--- hightlight current line
-vim.opt.termguicolors = true
-
 -- color
-vim.api.nvim_set_hl(0, 'Normal',        { fg = '#ffffff', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'NormalNC',      { fg = '#ffffff', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'NonText',       { fg = '#aaaaaa', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'SignColumn',    { fg = '#ffffff', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'TabLine',       { fg = '#ffffff', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'NormalFloat',   { fg = '#ffffff', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'Pmenu',         { fg = '#ffffff', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'FloatBorder',   { fg = '#ffffff', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'PmenuBorder',   { fg = '#ffffff', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'CmpBorder',     { fg = '#ffffff', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'WinSeparator',  { fg = '#ffffff', bg = 'NONE' })
+-- vim.api.nvim_set_hl(0, 'Normal',        { fg = '#ffffff', bg = 'NONE' })
+-- vim.api.nvim_set_hl(0, 'NormalNC',      { fg = '#ffffff', bg = 'NONE' })
+-- vim.api.nvim_set_hl(0, 'NonText',       { fg = '#aaaaaa', bg = 'NONE' })
+-- vim.api.nvim_set_hl(0, 'SignColumn',    { fg = '#ffffff', bg = 'NONE' })
+-- vim.api.nvim_set_hl(0, 'TabLine',       { fg = '#ffffff', bg = 'NONE' })
+-- vim.api.nvim_set_hl(0, 'NormalFloat',   { fg = '#ffffff', bg = 'NONE' })
+-- vim.api.nvim_set_hl(0, 'Pmenu',         { fg = '#ffffff', bg = 'NONE' })
+-- vim.api.nvim_set_hl(0, 'FloatBorder',   { fg = '#ffffff', bg = 'NONE' })
+-- vim.api.nvim_set_hl(0, 'PmenuBorder',   { fg = '#ffffff', bg = 'NONE' })
+-- vim.api.nvim_set_hl(0, 'CmpBorder',     { fg = '#ffffff', bg = 'NONE' })
+-- vim.api.nvim_set_hl(0, 'WinSeparator',  { fg = '#ffffff', bg = 'NONE' })
 
-vim.api.nvim_create_autocmd("ColorScheme", {
-  pattern = "*",
-  callback = function()
-    vim.cmd [[
-      highlight Normal       guifg=#ffffff guibg=NONE
-      highlight NormalNC     guifg=#ffffff guibg=NONE
-      highlight NonText      guifg=#aaaaaa guibg=NONE
-      highlight SignColumn   guifg=#ffffff guibg=NONE
-      highlight TabLine      guifg=#ffffff guibg=NONE
-      highlight NormalFloat  guifg=#ffffff guibg=NONE
-      highlight Pmenu        guifg=#ffffff guibg=NONE
-      highlight FloatBorder  guifg=#ffffff guibg=NONE
-      highlight PmenuBorder  guifg=#ffffff guibg=NONE
-      highlight CmpBorder    guifg=#ffffff guibg=NONE
-      highlight WinSeparator guifg=#ffffff guibg=NONE
-    ]]
-  end
-})
+-- vim.api.nvim_create_autocmd("ColorScheme", {
+--   pattern = "*",
+--   callback = function()
+--     vim.cmd [[
+--       highlight Normal       guifg=#ffffff guibg=NONE
+--       highlight NormalNC     guifg=#ffffff guibg=NONE
+--       highlight NonText      guifg=#aaaaaa guibg=NONE
+--       highlight SignColumn   guifg=#ffffff guibg=NONE
+--       highlight TabLine      guifg=#ffffff guibg=NONE
+--       highlight NormalFloat  guifg=#ffffff guibg=NONE
+--       highlight Pmenu        guifg=#ffffff guibg=NONE
+--       highlight FloatBorder  guifg=#ffffff guibg=NONE
+--       highlight PmenuBorder  guifg=#ffffff guibg=NONE
+--       highlight CmpBorder    guifg=#ffffff guibg=NONE
+--       highlight WinSeparator guifg=#ffffff guibg=NONE
+--     ]]
+--   end
+-- })
 vim.opt.cursorline = true;
-vim.api.nvim_set_hl(0, 'CursorLine',  { fg = 'NONE', bg = 'NONE', bold = true })
 
